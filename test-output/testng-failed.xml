@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testnextsp.updateProductTest">
+      <class name="testnextsp.statisticsTest">
         <methods>
-          <include name="TC_02_checkProductName"/>
-          <include name="beforeClass"/>
-          <include name="TC_07_checkDescription"/>
           <include name="afterClass"/>
+          <include name="TC_03_selectYear"/>
+          <include name="beforeClass"/>
+          <include name="TC_04_selectMonth"/>
         </methods>
-      </class> <!-- testnextsp.updateProductTest -->
+      </class> <!-- testnextsp.statisticsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

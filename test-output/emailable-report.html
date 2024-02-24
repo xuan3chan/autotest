@@ -9,18 +9,29 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">5</td><td class="num">0</td><td class="num attn">2</td><td class="num">41.816</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">9.018</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testnextsp.updateProductTest</td><td><a href="#m0">TC_02_checkProductName</a></td><td rowspan="1">1708787129707</td><td rowspan="1">6179</td></tr><tr class="failedeven"><td><a href="#m1">TC_07_checkDescription</a></td><td rowspan="1">1708787156627</td><td rowspan="1">6199</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="5">testnextsp.updateProductTest</td><td><a href="#m2">TC_01_openForm</a></td><td rowspan="1">1708787129625</td><td rowspan="1">80</td></tr><tr class="passedeven"><td><a href="#m3">TC_03_checkPrice</a></td><td rowspan="1">1708787135888</td><td rowspan="1">6203</td></tr><tr class="passedeven"><td><a href="#m4">TC_04_checkOldPrice</a></td><td rowspan="1">1708787142091</td><td rowspan="1">6197</td></tr><tr class="passedeven"><td><a href="#m5">TC_05_checkBrand</a></td><td rowspan="1">1708787148289</td><td rowspan="1">4181</td></tr><tr class="passedeven"><td><a href="#m6">TC_06_checkCategory</a></td><td rowspan="1">1708787152471</td><td rowspan="1">4155</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">testnextsp.statisticsTest</td><td><a href="#m0">TC_03_selectYear</a></td><td rowspan="1">1708794734571</td><td rowspan="1">1061</td></tr><tr class="failedeven"><td><a href="#m1">TC_04_selectMonth</a></td><td rowspan="1">1708794735635</td><td rowspan="1">1054</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testnextsp.statisticsTest</td><td><a href="#m2">TC_01_checkUrl</a></td><td rowspan="1">1708794732512</td><td rowspan="1">19</td></tr><tr class="passedeven"><td><a href="#m3">TC_02_TextOnSideBar</a></td><td rowspan="1">1708794732532</td><td rowspan="1">2038</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testnextsp.updateProductTest#TC_02_checkProductName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Test case update Product Name] but found [Test case update Product ...]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at testnextsp.updateProductTest.TC_02_checkProductName(updateProductTest.java:83)
+<h2>Default test</h2><h3 id="m0">testnextsp.statisticsTest#TC_03_selectYear</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;select&gt;...&lt;/select&gt; is not clickable at point (170, 11). Other element would receive the click: &lt;nav class=&quot;sticky z-10 flex items-center shadow-md justify-between px-4 py-4 md:px-8 top-0 w-full bg-white&quot;&gt;...&lt;/nav&gt;
+  (Session info: chrome=122.0.6261.70)
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:54:15.039Z&apos;
+System info: host: &apos;SCOPIAN&apos;, ip: &apos;192.168.11.154&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=122.0.6261.57 (87957e464700ccf3468df47ce741e0dc089e0544-refs/branch-heads/6261@{#853}), userDataDir=C:\Users\xuann\AppData\Local\Temp\scoped_dir24108_1854936476}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:51732}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=122.0.6261.70, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fce1b9eac047ab0a7519893b59b405c9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at testnextsp.statisticsTest.TC_03_selectYear(statisticsTest.java:81)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -45,14 +56,25 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testnextsp.updateProductTest#TC_07_checkDescription</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Test case update description] but found [Test case updat...]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at testnextsp.updateProductTest.TC_07_checkDescription(updateProductTest.java:201)
+<h3 id="m1">testnextsp.statisticsTest#TC_04_selectMonth</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;select&gt;...&lt;/select&gt; is not clickable at point (218, 11). Other element would receive the click: &lt;nav class=&quot;sticky z-10 flex items-center shadow-md justify-between px-4 py-4 md:px-8 top-0 w-full bg-white&quot;&gt;...&lt;/nav&gt;
+  (Session info: chrome=122.0.6261.70)
+Build info: version: &apos;3.5.3&apos;, revision: &apos;a88d25fe6b&apos;, time: &apos;2017-08-29T12:54:15.039Z&apos;
+System info: host: &apos;SCOPIAN&apos;, ip: &apos;192.168.11.154&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;20.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=122.0.6261.57 (87957e464700ccf3468df47ce741e0dc089e0544-refs/branch-heads/6261@{#853}), userDataDir=C:\Users\xuann\AppData\Local\Temp\scoped_dir24108_1854936476}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), webauthn:extension:minPinLength=true, goog:chromeOptions={debuggerAddress=localhost:51732}, webauthn:extension:credBlob=true, webauthn:extension:prf=true, acceptInsecureCerts=false, browserVersion=122.0.6261.70, fedcm:accounts=true, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true, webauthn:extension:largeBlob=true, webauthn:virtualAuthenticators=true}]
+Session ID: fce1b9eac047ab0a7519893b59b405c9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:275)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at testnextsp.statisticsTest.TC_04_selectMonth(statisticsTest.java:94)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
@@ -77,10 +99,7 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testnextsp.updateProductTest#TC_01_openForm</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">testnextsp.updateProductTest#TC_03_checkPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">testnextsp.updateProductTest#TC_04_checkOldPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">testnextsp.updateProductTest#TC_05_checkBrand</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">testnextsp.updateProductTest#TC_06_checkCategory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testnextsp.statisticsTest#TC_01_checkUrl</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testnextsp.statisticsTest#TC_02_TextOnSideBar</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
