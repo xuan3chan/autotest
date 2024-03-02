@@ -3,14 +3,30 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testnextsp.statisticsTest">
+      <class name="testnextsp.AddProductTest">
         <methods>
-          <include name="afterClass"/>
-          <include name="TC_03_selectYear"/>
+          <include name="TC_21_descriptionFieldMinValueCheck"/>
           <include name="beforeClass"/>
-          <include name="TC_04_selectMonth"/>
+          <include name="TC_10_productNameFieldMaxLengthCheck"/>
+          <include name="TC_16_descriptionFieldMinLengthCheck"/>
+          <include name="TC_07_priceFieldSymbolCheck"/>
+          <include name="TC_06_productNameFieldSymbolCheck"/>
+          <include name="TC_11_priceFieldMaxLengthCheck"/>
+          <include name="TC_20_oldPriceFieldMaxValueCheck"/>
+          <include name="afterClass"/>
+          <include name="TC_13_descriptionFieldMaxLengthCheck"/>
+          <include name="TC_18_oldPriceFieldMinValueCheck"/>
+          <include name="TC_19_priceFieldMaxValueCheck"/>
+          <include name="TC_22_descriptionFieldMaxValueCheck"/>
+          <include name="TC_14_checkminlength"/>
+          <include name="TC_15_oldPriceFieldMinLengthCheck"/>
+          <include name="TC_17_priceFieldMinValueCheck"/>
+          <include name="TC_12_oldPriceFieldMaxLengthCheck"/>
+          <include name="TC_9_descriptionFieldSymbolCheck"/>
+          <include name="TC_08_oldPriceFieldSymbolCheck"/>
+          <include name="TC_03_CheckProduct"/>
         </methods>
-      </class> <!-- testnextsp.statisticsTest -->
+      </class> <!-- testnextsp.AddProductTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
