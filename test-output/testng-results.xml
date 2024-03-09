@@ -1,46 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="22" passed="4" failed="18" skipped="0">
+<testng-results ignored="0" total="22" passed="0" failed="0" skipped="22">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-02T15:26:03Z" name="Default suite" finished-at="2024-03-02T15:26:25Z" duration-ms="22041">
+  <suite started-at="2024-03-07T13:53:07Z" name="Default suite" finished-at="2024-03-07T13:54:16Z" duration-ms="69200">
     <groups>
     </groups>
-    <test started-at="2024-03-02T15:26:03Z" name="Default test" finished-at="2024-03-02T15:26:25Z" duration-ms="22041">
-      <class name="testnextsp.AddProductTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:03Z" name="beforeClass" finished-at="2024-03-02T15:26:12Z" duration-ms="9203" status="PASS">
+    <test started-at="2024-03-07T13:53:07Z" name="Default test" finished-at="2024-03-07T13:54:16Z" duration-ms="69200">
+      <class name="testnextsp.updateProductTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:53:07Z" name="beforeClass" finished-at="2024-03-07T13:54:16Z" duration-ms="69101" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="TC_01_openform()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:12Z" name="TC_01_openform" finished-at="2024-03-02T15:26:12Z" duration-ms="89" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_01_openform -->
-        <test-method signature="TC_02_AddProduct()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:12Z" name="TC_02_AddProduct" finished-at="2024-03-02T15:26:17Z" duration-ms="4601" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_02_AddProduct -->
-        <test-method signature="TC_03_CheckProduct()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:17Z" name="TC_03_CheckProduct" finished-at="2024-03-02T15:26:17Z" duration-ms="56" status="FAIL">
+        <test-method signature="TC_01_openForm()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_01_openForm" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Test case Product Name] but found [Test case Product Name...]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Test case Product Name] but found [Test case Product Name...]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_03_CheckProduct(AddProductTest.java:124)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -61,37 +94,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_03_CheckProduct -->
-        <test-method signature="TC_04_EmptyField()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:17Z" name="TC_04_EmptyField" finished-at="2024-03-02T15:26:21Z" duration-ms="4175" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_04_EmptyField -->
-        <test-method signature="TC_05_CheckDropdown()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:21Z" name="TC_05_CheckDropdown" finished-at="2024-03-02T15:26:24Z" duration-ms="2346" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_05_CheckDropdown -->
-        <test-method signature="TC_06_productNameFieldSymbolCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_06_productNameFieldSymbolCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="63" status="FAIL">
+        </test-method> <!-- TC_01_openForm -->
+        <test-method signature="TC_02_checkProductName()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_02_checkProductName" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Tên sản phẩm không được chứa ký tự đặc biệt.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Tên sản phẩm không được chứa ký tự đặc biệt.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_06_productNameFieldSymbolCheck(AddProductTest.java:210)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -112,29 +138,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_06_productNameFieldSymbolCheck -->
-        <test-method signature="TC_07_priceFieldSymbolCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_07_priceFieldSymbolCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="51" status="FAIL">
+        </test-method> <!-- TC_02_checkProductName -->
+        <test-method signature="TC_03_checkPrice()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_03_checkPrice" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá không được chứa ký tự đặc biệt.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá không được chứa ký tự đặc biệt.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_07_priceFieldSymbolCheck(AddProductTest.java:220)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -155,29 +182,30 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_07_priceFieldSymbolCheck -->
-        <test-method signature="TC_08_oldPriceFieldSymbolCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_08_oldPriceFieldSymbolCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="52" status="FAIL">
+        </test-method> <!-- TC_03_checkPrice -->
+        <test-method signature="TC_04_checkOldPrice()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_04_checkOldPrice" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá cũ không được chứa ký tự đặc biệt.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá cũ không được chứa ký tự đặc biệt.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_08_oldPriceFieldSymbolCheck(AddProductTest.java:229)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -198,29 +226,250 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC_08_oldPriceFieldSymbolCheck -->
-        <test-method signature="TC_10_productNameFieldMaxLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_10_productNameFieldMaxLengthCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="116" status="FAIL">
+        </test-method> <!-- TC_04_checkOldPrice -->
+        <test-method signature="TC_05_checkBrand()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_05_checkBrand" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Tên sản phẩm không được quá 100 ký tự.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Tên sản phẩm không được quá 100 ký tự.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_10_productNameFieldMaxLengthCheck(AddProductTest.java:249)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_05_checkBrand -->
+        <test-method signature="TC_06_checkCategory()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_06_checkCategory" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_06_checkCategory -->
+        <test-method signature="TC_07_checkDescription()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_07_checkDescription" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_07_checkDescription -->
+        <test-method signature="TC_08_checkDropdown()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_08_checkDropdown" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_08_checkDropdown -->
+        <test-method signature="TC_09checkSymbol()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_09checkSymbol" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_09checkSymbol -->
+        <test-method signature="TC_10_productNameFieldMaxLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_10_productNameFieldMaxLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -242,28 +491,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_10_productNameFieldMaxLengthCheck -->
-        <test-method signature="TC_11_priceFieldMaxLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_11_priceFieldMaxLengthCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="104" status="FAIL">
+        <test-method signature="TC_11_priceFieldMaxLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_11_priceFieldMaxLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá không được quá 100 ký tự.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá không được quá 100 ký tự.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_11_priceFieldMaxLengthCheck(AddProductTest.java:259)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -285,28 +535,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_11_priceFieldMaxLengthCheck -->
-        <test-method signature="TC_12_oldPriceFieldMaxLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_12_oldPriceFieldMaxLengthCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="108" status="FAIL">
+        <test-method signature="TC_12_oldPriceFieldMaxLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_12_oldPriceFieldMaxLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá cũ không được quá 100 ký tự.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá cũ không được quá 100 ký tự.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_12_oldPriceFieldMaxLengthCheck(AddProductTest.java:268)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -328,28 +579,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_12_oldPriceFieldMaxLengthCheck -->
-        <test-method signature="TC_13_descriptionFieldMaxLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_13_descriptionFieldMaxLengthCheck" finished-at="2024-03-02T15:26:24Z" duration-ms="432" status="FAIL">
+        <test-method signature="TC_13_descriptionFieldMaxLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_13_descriptionFieldMaxLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Mô tả không được quá 500 ký tự.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mô tả không được quá 500 ký tự.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_13_descriptionFieldMaxLengthCheck(AddProductTest.java:283)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -371,28 +623,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_13_descriptionFieldMaxLengthCheck -->
-        <test-method signature="TC_14_checkminlength()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:24Z" name="TC_14_checkminlength" finished-at="2024-03-02T15:26:25Z" duration-ms="46" status="FAIL">
+        <test-method signature="TC_14_checkminlength()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_14_checkminlength" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá không được ít hơn 2 ký tự.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá không được ít hơn 2 ký tự.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_14_checkminlength(AddProductTest.java:292)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -414,28 +667,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_14_checkminlength -->
-        <test-method signature="TC_15_oldPriceFieldMinLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_15_oldPriceFieldMinLengthCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="48" status="FAIL">
+        <test-method signature="TC_15_oldPriceFieldMinLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_15_oldPriceFieldMinLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá cũ không được ít hơn 2 ký tự.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá cũ không được ít hơn 2 ký tự.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_15_oldPriceFieldMinLengthCheck(AddProductTest.java:301)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -457,28 +711,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_15_oldPriceFieldMinLengthCheck -->
-        <test-method signature="TC_16_descriptionFieldMinLengthCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_16_descriptionFieldMinLengthCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="47" status="FAIL">
+        <test-method signature="TC_16_descriptionFieldMinLengthCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_16_descriptionFieldMinLengthCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Mô tả không được ít hơn 2 ký tự.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mô tả không được ít hơn 2 ký tự.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_16_descriptionFieldMinLengthCheck(AddProductTest.java:311)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -500,28 +755,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_16_descriptionFieldMinLengthCheck -->
-        <test-method signature="TC_17_priceFieldMinValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_17_priceFieldMinValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="40" status="FAIL">
+        <test-method signature="TC_17_priceFieldMinValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_17_priceFieldMinValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá không được nhỏ hơn 1.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá không được nhỏ hơn 1.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_17_priceFieldMinValueCheck(AddProductTest.java:320)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -543,28 +799,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_17_priceFieldMinValueCheck -->
-        <test-method signature="TC_18_oldPriceFieldMinValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_18_oldPriceFieldMinValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="45" status="FAIL">
+        <test-method signature="TC_18_oldPriceFieldMinValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_18_oldPriceFieldMinValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá cũ không được nhỏ hơn 1.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá cũ không được nhỏ hơn 1.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_18_oldPriceFieldMinValueCheck(AddProductTest.java:329)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -586,28 +843,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_18_oldPriceFieldMinValueCheck -->
-        <test-method signature="TC_19_priceFieldMaxValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_19_priceFieldMaxValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="60" status="FAIL">
+        <test-method signature="TC_19_priceFieldMaxValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_19_priceFieldMaxValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá không được lớn hơn 99 999 999 999.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá không được lớn hơn 99 999 999 999.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_19_priceFieldMaxValueCheck(AddProductTest.java:338)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -629,28 +887,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_19_priceFieldMaxValueCheck -->
-        <test-method signature="TC_20_oldPriceFieldMaxValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_20_oldPriceFieldMaxValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="52" status="FAIL">
+        <test-method signature="TC_20_oldPriceFieldMaxValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_20_oldPriceFieldMaxValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Giá cũ không được lớn hơn 99 999 999 999.] but found [Vui lòng nhập một số.]]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Giá cũ không được lớn hơn 99 999 999 999.] but found [Vui lòng nhập một số.]
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_20_oldPriceFieldMaxValueCheck(AddProductTest.java:347)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -672,28 +931,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_20_oldPriceFieldMaxValueCheck -->
-        <test-method signature="TC_21_descriptionFieldMinValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_21_descriptionFieldMinValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="46" status="FAIL">
+        <test-method signature="TC_21_descriptionFieldMinValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_21_descriptionFieldMinValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Mô tả không được nhỏ hơn 1.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mô tả không được nhỏ hơn 1.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_21_descriptionFieldMinValueCheck(AddProductTest.java:357)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -715,28 +975,29 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_21_descriptionFieldMinValueCheck -->
-        <test-method signature="TC_22_descriptionFieldMaxValueCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_22_descriptionFieldMaxValueCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="48" status="FAIL">
+        <test-method signature="TC_22_descriptionFieldMaxValueCheck()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="TC_22_descriptionFieldMaxValueCheck" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [Mô tả không được lớn hơn 99 999 999 999.] but found []]]>
+              <![CDATA[expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mô tả không được lớn hơn 99 999 999 999.] but found []
+              <![CDATA[java.lang.AssertionError: expected [https://admin.nextsp-server.id.vn/products] but found [https://admin.nextsp-server.id.vn/login]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_22_descriptionFieldMaxValueCheck(AddProductTest.java:367)
+at testnextsp.updateProductTest.beforeClass(updateProductTest.java:49)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -758,54 +1019,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_22_descriptionFieldMaxValueCheck -->
-        <test-method signature="TC_9_descriptionFieldSymbolCheck()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="TC_9_descriptionFieldSymbolCheck" finished-at="2024-03-02T15:26:25Z" duration-ms="45" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Mô tả không được chứa ký tự đặc biệt.] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Mô tả không được chứa ký tự đặc biệt.] but found []
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at testnextsp.AddProductTest.TC_9_descriptionFieldSymbolCheck(AddProductTest.java:238)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_9_descriptionFieldSymbolCheck -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testnextsp.AddProductTest@42e99e4a]" started-at="2024-03-02T15:26:25Z" name="afterClass" finished-at="2024-03-02T15:26:25Z" duration-ms="133" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testnextsp.updateProductTest@42e99e4a]" started-at="2024-03-07T13:54:16Z" name="afterClass" finished-at="2024-03-07T13:54:16Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- testnextsp.AddProductTest -->
+      </class> <!-- testnextsp.updateProductTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
