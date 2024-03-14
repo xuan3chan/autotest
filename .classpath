@@ -37,5 +37,10 @@
 	<classpathentry kind="lib" path="libaries/graphql-java-0.0.0-2023-08-23T22-15-56-72645a5.jar"/>
 	<classpathentry kind="lib" path="libaries/graphql-java-17.0-beta1.jar"/>
 	<classpathentry kind="lib" path="libaries/failsafe-3.1.0.jar"/>
+	<classpathentry kind="lib" path="libaries/poi-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libaries/poi-ooxml-4.1.2.jar"/>
+	<classpathentry kind="lib" path="libaries/xmlbeans-3.1.0.jar"/>
+	<classpathentry kind="lib" path="libaries/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="libaries/ooxml-schemas-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,8 +1,14 @@
 package testnextsp;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +40,7 @@ public class AddProductTest {
 		driver.navigate().to("https://admin.nextsp-server.id.vn/login");
 		driver.findElement(By.id("accountName")).sendKeys("admin2");
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		WebElement passwordField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("password")));
 		passwordField.sendKeys("admin");
 
@@ -108,7 +114,7 @@ public class AddProductTest {
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[6]/button"));
 		addProductButton.click();
 		Thread.sleep(4000);
-		
+
 	}
 
 	@Test
@@ -366,6 +372,58 @@ public class AddProductTest {
 		descriptionField.sendKeys("100 000 000 000");
 		Assert.assertEquals(descriptionField.getAttribute("validationMessage"),
 				"Mô tả không được lớn hơn 99 999 999 999.");
+
+	}
+
+	@Test
+	// use data from excel check required field
+	public void useDataFromExcel() throws IOException {
+		try {
+			FileInputStream fis = new FileInputStream(projectPath + "\\data\\AddProductData.xlsx");
+			XSSFWorkbook workbook = new XSSFWorkbook(fis);
+			XSSFSheet sheet = workbook.getSheet("testdata");
+			int rowCount = sheet.getLastRowNum();
+			// lay data theo cot case name trong bảng mỗi case name là 1 đối tương
+			// các cột có price và oldPrice co ky tu dat biet vi du (!@#$%^&*()_+)
+			// nếu như cell trong thi bo qua
+			for (int i = 1; i <= rowCount; i++) {
+				String caseName = sheet.getRow(i).getCell(0).getStringCellValue();
+				String productName = sheet.getRow(i).getCell(1).getCellTypeEnum() == CellType.NUMERIC
+						? String.valueOf(sheet.getRow(i).getCell(1).getNumericCellValue())
+						: sheet.getRow(i).getCell(1).getStringCellValue();
+				String price = sheet.getRow(i).getCell(2).getCellType() == CellType.NUMERIC
+						? String.valueOf(sheet.getRow(i).getCell(2).getNumericCellValue())
+						: sheet.getRow(i).getCell(2).getStringCellValue();
+
+				String oldPrice = sheet.getRow(i).getCell(3).getCellType() == CellType.NUMERIC
+						? String.valueOf(sheet.getRow(i).getCell(3).getNumericCellValue())
+						: sheet.getRow(i).getCell(3).getStringCellValue();
+				String brand = sheet.getRow(i).getCell(4).getStringCellValue();
+				String category = sheet.getRow(i).getCell(5).getStringCellValue();
+				String description = sheet.getRow(i).getCell(6).getCellTypeEnum() == CellType.NUMERIC ?
+		                String.valueOf(sheet.getRow(i).getCell(6).getNumericCellValue()) :
+		                sheet.getRow(i).getCell(6).getStringCellValue();
+				String image = sheet.getRow(i).getCell(7).getStringCellValue();
+				String status = sheet.getRow(i).getCell(8).getStringCellValue();
+
+				// Fill in the form fields with appropriate values
+
+				System.out.println("Test case name: " + caseName);
+				System.out.println("Product Name: " + productName);
+				System.out.println("Price: " + price);
+				System.out.println("Old Price: " + oldPrice);
+				System.out.println("Brand: " + brand);
+				System.out.println("Category: " + category);
+				System.out.println("Description: " + description);
+				System.out.println("Image: " + image);
+				System.out.println("Status: " + status);
+
+			}
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
