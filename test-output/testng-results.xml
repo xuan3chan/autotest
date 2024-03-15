@@ -2,20 +2,20 @@
 <testng-results ignored="22" total="23" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-14T16:53:32Z" name="Default suite" finished-at="2024-03-14T16:53:42Z" duration-ms="10025">
+  <suite started-at="2024-03-14T17:23:52Z" name="Default suite" finished-at="2024-03-14T17:24:01Z" duration-ms="9517">
     <groups>
     </groups>
-    <test started-at="2024-03-14T16:53:32Z" name="Default test" finished-at="2024-03-14T16:53:42Z" duration-ms="10025">
+    <test started-at="2024-03-14T17:23:52Z" name="Default test" finished-at="2024-03-14T17:24:01Z" duration-ms="9517">
       <class name="testnextsp.AddProductTest">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T16:53:32Z" name="beforeClass" finished-at="2024-03-14T16:53:41Z" duration-ms="9402" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T17:23:52Z" name="beforeClass" finished-at="2024-03-14T17:24:00Z" duration-ms="8880" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="useDataFromExcel()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T16:53:41Z" name="useDataFromExcel" finished-at="2024-03-14T16:53:41Z" duration-ms="456" status="PASS">
+        <test-method signature="useDataFromExcel()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T17:24:00Z" name="useDataFromExcel" finished-at="2024-03-14T17:24:01Z" duration-ms="451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- useDataFromExcel -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T16:53:41Z" name="afterClass" finished-at="2024-03-14T16:53:42Z" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:testnextsp.AddProductTest@82de64a]" started-at="2024-03-14T17:24:01Z" name="afterClass" finished-at="2024-03-14T17:24:01Z" duration-ms="174" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
