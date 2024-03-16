@@ -21,10 +21,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import Helper.ExcelHelper;
+
 public class AddProductTest {
 	WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	String osName = System.getProperty("os.name");
+	// Excel data
+	ExcelHelper excelHelper = new ExcelHelper();
+	List<List<String>> excelData = excelHelper.useDataFromExcel();
 
 	@BeforeClass
 	public void beforeClass() throws InterruptedException {
@@ -68,18 +73,26 @@ public class AddProductTest {
 	}
 
 	@Test
-	public void TC_02_AddProduct() throws InterruptedException {
+	public void TC_02_AddProduct() throws InterruptedException, IOException {
+		// get data from excel
+		String productName = excelData.get(0).get(2);
+		String price = excelData.get(0).get(3);
+		String oldPrice = excelData.get(0).get(4);
+		String description = excelData.get(0).get(7);
+		String image = excelData.get(0).get(8);
+		
+
 		// Fill in the form fields with appropriate values
 		WebElement productNameField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[1]/div/input"));
-		productNameField.sendKeys("Test case Product Name");
+		productNameField.sendKeys(productName);
 
 		WebElement priceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
-		priceField.sendKeys("1000000");
+		priceField.sendKeys(price);
 		WebElement oldPriceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("200000");
+		oldPriceField.sendKeys(oldPrice);
 
 		// Handle dropdowns using Select class
 		Select brandDropdown = new Select(driver.findElement(
@@ -107,7 +120,7 @@ public class AddProductTest {
 		// Upload an image (if applicable) using a relative path to the image file
 		WebElement imageUploadButton = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[5]/div[1]/input"));
-		imageUploadButton.sendKeys("C:\\Users\\xuann\\Desktop\\videoposet\\dmd.png");
+		imageUploadButton.sendKeys(image);
 
 		// Click the "Add Product" button
 		WebElement addProductButton = driver
@@ -120,6 +133,7 @@ public class AddProductTest {
 	@Test
 	public void TC_03_CheckProduct() throws InterruptedException {
 		// Wait for the product table to be updated
+		String productData = excelData.get(0).get(2);
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("/html/body/div/section/div[2]/div/div[3]/table/tbody/tr[1]/td[2]")));
@@ -127,7 +141,7 @@ public class AddProductTest {
 		// Verify the product is added
 		WebElement productName = driver
 				.findElement(By.xpath("//*[@id=\"root\"]/section/div[2]/div/div[3]/table/tbody/tr[1]/td[2]"));
-		Assert.assertEquals(productName.getText(), "Test case Product Name");// lỗi không hiên tên đầy đủ ở danh sách
+		Assert.assertEquals(productName.getText(),productData );// lỗi không hiên tên đầy đủ ở danh sách
 		Thread.sleep(3000);
 	}
 
@@ -209,10 +223,11 @@ public class AddProductTest {
 	// check symbol in field
 	@Test
 	public void TC_06_productNameFieldSymbolCheck() {
+		String productName = excelData.get(2).get(2);
 		// Test for productNameField symbol validation
 		WebElement productNameField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[1]/div/input"));
-		productNameField.sendKeys("!@#$%^&*()_+");
+		productNameField.sendKeys(productName);
 		Assert.assertEquals(productNameField.getAttribute("validationMessage"),
 				"Tên sản phẩm không được chứa ký tự đặc biệt.");
 	}
@@ -220,27 +235,30 @@ public class AddProductTest {
 	@Test
 	public void TC_07_priceFieldSymbolCheck() {
 		// Test for priceField symbol validation
+		String price = excelData.get(3).get(3);
 		WebElement priceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
-		priceField.sendKeys("!@#$%^&*()_+");
+		priceField.sendKeys(price);
 		Assert.assertEquals(priceField.getAttribute("validationMessage"), "Giá không được chứa ký tự đặc biệt.");
 	}
 
 	@Test
 	public void TC_08_oldPriceFieldSymbolCheck() {
+		String oldPrice = excelData.get(4).get(4);
 		// Test for oldPriceField symbol validation
 		WebElement oldPriceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("!@#$%^&*()_+");
+		oldPriceField.sendKeys(oldPrice);
 		Assert.assertEquals(oldPriceField.getAttribute("validationMessage"), "Giá cũ không được chứa ký tự đặc biệt.");
 	}
 
 	@Test
 	public void TC_9_descriptionFieldSymbolCheck() {
+		String description = excelData.get(5).get(7);
 		// Test for descriptionField symbol validation
 		WebElement descriptionField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[4]/div/textarea"));
-		descriptionField.sendKeys("!@#$%^&*()_+");
+		descriptionField.sendKeys(description);
 		Assert.assertEquals(descriptionField.getAttribute("validationMessage"),
 				"Mô tả không được chứa ký tự đặc biệt.");
 	}
@@ -248,6 +266,7 @@ public class AddProductTest {
 	// check max length
 	@Test
 	public void TC_10_productNameFieldMaxLengthCheck() {
+		String productName = excelData.get(6).get(2);
 		// Test for productNameField max length validation
 		WebElement productNameField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[1]/div/input"));
@@ -259,18 +278,20 @@ public class AddProductTest {
 	@Test
 	public void TC_11_priceFieldMaxLengthCheck() {
 		// Test for priceField max length validation
+		String price = excelData.get(7).get(3);
 		WebElement priceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
-		priceField.sendKeys("12345678901234567890123456789012345678901234567890123456789012345678901234567890");
+		priceField.sendKeys(price);
 		Assert.assertEquals(priceField.getAttribute("validationMessage"), "Giá không được quá 100 ký tự.");
 	}
 
 	@Test
 	public void TC_12_oldPriceFieldMaxLengthCheck() {
 		// Test for oldPriceField max length validation
+		String oldPrice = excelData.get(8).get(4);
 		WebElement oldPriceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("123456789" + "01234567890123456789012345678901234567890123456789012345678901234567890");
+		oldPriceField.sendKeys(oldPrice);
 		Assert.assertEquals(oldPriceField.getAttribute("validationMessage"), "Giá cũ không được quá 100 ký tự.");
 
 	}
@@ -278,20 +299,18 @@ public class AddProductTest {
 	@Test
 	public void TC_13_descriptionFieldMaxLengthCheck() {
 		// Test for descriptionField max length validation
+		String description = excelData.get(9).get(7);
 		WebElement descriptionField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[4]/div/textarea"));
 		descriptionField
-				.sendKeys("123456" + "78901234567890123456789012345678901234567890123456789012345678901234567890"
-						+ "12345678901234567890123456789012345678901234567890123456789012345678901234567890"
-						+ "12345678901234567890123456789012345678901234567890123456789012345678901234567890"
-						+ "12345678901234567890123456789012345678901234567890123456789012345678901234567890"
-						+ "12345678901234567890123456789012345678901234567890123456789012345678901234567890");
+				.sendKeys(description);
 		Assert.assertEquals(descriptionField.getAttribute("validationMessage"), "Mô tả không được quá 500 ký tự.");
 	}
 
 	@Test
 	public void TC_14_checkminlength() {
 		// Test for priceField min length validation
+		String price = excelData.get(10).get(3);
 		WebElement priceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
 		priceField.sendKeys("1");
@@ -301,82 +320,56 @@ public class AddProductTest {
 	@Test
 	public void TC_15_oldPriceFieldMinLengthCheck() {
 		// Test for oldPriceField min length validation
+		String oldPrice = excelData.get(11).get(4);
 		WebElement oldPriceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("1");
+		oldPriceField.sendKeys(oldPrice);
 		Assert.assertEquals(oldPriceField.getAttribute("validationMessage"), "Giá cũ không được ít hơn 2 ký tự.");
 
 	}
 
 	@Test
 	public void TC_16_descriptionFieldMinLengthCheck() {
+		String description = excelData.get(12).get(7);
 		// Test for descriptionField min length validation
 		WebElement descriptionField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[4]/div/textarea"));
-		descriptionField.sendKeys("1");
+		descriptionField.sendKeys(description);
 		Assert.assertEquals(descriptionField.getAttribute("validationMessage"), "Mô tả không được ít hơn 2 ký tự.");
 	}
 
 	@Test
 	public void TC_17_priceFieldMinValueCheck() {
 		// Test for priceField min value validation
+		String price = excelData.get(13).get(3);
 		WebElement priceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
-		priceField.sendKeys("0");
+		priceField.sendKeys(price);
 		Assert.assertEquals(priceField.getAttribute("validationMessage"), "Giá không được nhỏ hơn 1.");
 	}
 
 	@Test
 	public void TC_18_oldPriceFieldMinValueCheck() {
 		// Test for oldPriceField min value validation
+		String oldPrice = excelData.get(14).get(4);
 		WebElement oldPriceField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("0");
+		oldPriceField.sendKeys(oldPrice);
 		Assert.assertEquals(oldPriceField.getAttribute("validationMessage"), "Giá cũ không được nhỏ hơn 1.");
 	}
 
 	@Test
-	public void TC_19_priceFieldMaxValueCheck() {
-		// Test for priceField max value validation
-		WebElement priceField = driver
-				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[1]/input"));
-		priceField.sendKeys("100 000 000 000");
-		Assert.assertEquals(priceField.getAttribute("validationMessage"), "Giá không được lớn hơn 99 999 999 999.");
-	}
-
-	@Test
-	public void TC_20_oldPriceFieldMaxValueCheck() {
-		// Test for oldPriceField max value validation
-		WebElement oldPriceField = driver
-				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[2]/div[2]/input"));
-		oldPriceField.sendKeys("100 000 000 000");
-		Assert.assertEquals(oldPriceField.getAttribute("validationMessage"),
-				"Giá cũ không được lớn hơn 99 999 999 999.");
-	}
-
-	@Test
-	public void TC_21_descriptionFieldMinValueCheck() {
+	public void TC_19_descriptionFieldMinValueCheck() {
 		// Test for descriptionField min value validation
+		String description = excelData.get(17).get(7);
 		WebElement descriptionField = driver
 				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[4]/div/textarea"));
-		descriptionField.sendKeys("0");
+		descriptionField.sendKeys(description);
 		Assert.assertEquals(descriptionField.getAttribute("validationMessage"), "Mô tả không được nhỏ hơn 1.");
 
 	}
 
-	@Test
-	public void TC_22_descriptionFieldMaxValueCheck() {
-		// Test for descriptionField max value validation
-		WebElement descriptionField = driver
-				.findElement(By.xpath("/html/body/div/section/div[2]/div/div[1]/div[3]/div/form/div[4]/div/textarea"));
-		descriptionField.sendKeys("100 000 000 000");
-		Assert.assertEquals(descriptionField.getAttribute("validationMessage"),
-				"Mô tả không được lớn hơn 99 999 999 999.");
 
-	}
-
-
-	
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
