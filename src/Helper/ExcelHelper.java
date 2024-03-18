@@ -18,6 +18,7 @@ public class ExcelHelper {
         // Default constructor
     }
 
+
     public List<List<String>> useDataFromExcel() {
         List<List<String>> excelData = new ArrayList<>();
         try {
@@ -25,28 +26,18 @@ public class ExcelHelper {
             XSSFWorkbook workbook = new XSSFWorkbook(fis);
             XSSFSheet sheet = workbook.getSheet("testdata");
             int rowCount = sheet.getLastRowNum();
-            for (int i = 1; i <= rowCount; i++) {
-                List<String> rowData = new ArrayList<>();
-                rowData.add("Row " + i);
-                rowData.add(sheet.getRow(i).getCell(0).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(1).getCellTypeEnum() == CellType.NUMERIC
-                        ? String.valueOf(sheet.getRow(i).getCell(1).getNumericCellValue())
-                        : sheet.getRow(i).getCell(1).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(2).getCellType() == CellType.NUMERIC
-                        ? String.valueOf(sheet.getRow(i).getCell(2).getNumericCellValue())
-                        : sheet.getRow(i).getCell(2).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(3).getCellType() == CellType.NUMERIC
-                        ? String.valueOf(sheet.getRow(i).getCell(3).getNumericCellValue())
-                        : sheet.getRow(i).getCell(3).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(4).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(5).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(6).getCellTypeEnum() == CellType.NUMERIC
-                        ? String.valueOf(sheet.getRow(i).getCell(6).getNumericCellValue())
-                        : sheet.getRow(i).getCell(6).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(7).getStringCellValue());
-                rowData.add(sheet.getRow(i).getCell(8).getStringCellValue());
-                excelData.add(rowData);
-            }
+            int columnCount = sheet.getRow(0).getLastCellNum();
+			for (int i = 1; i <= rowCount; i++) {
+				List<String> rowData = new ArrayList<>();
+				for (int j = 0; j < columnCount; j++) {
+					if (sheet.getRow(i).getCell(j).getCellType() == CellType.NUMERIC) {
+						rowData.add(String.valueOf((int) sheet.getRow(i).getCell(j).getNumericCellValue()));
+					} else {
+						rowData.add(sheet.getRow(i).getCell(j).getStringCellValue());
+					}
+				}
+				excelData.add(rowData);
+			}
             workbook.close(); // Close workbook to release resources
             fis.close(); // Close FileInputStream to release resources
         } catch (FileNotFoundException e) {
