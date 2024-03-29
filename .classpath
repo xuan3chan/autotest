@@ -42,5 +42,9 @@
 	<classpathentry kind="lib" path="libaries/xmlbeans-3.1.0.jar"/>
 	<classpathentry kind="lib" path="libaries/commons-collections4-4.4.jar"/>
 	<classpathentry kind="lib" path="libaries/ooxml-schemas-1.4.jar"/>
+	<classpathentry kind="lib" path="libaries/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="libaries/core-3.5.3.jar"/>
+	<classpathentry kind="lib" path="libaries/zxing-j2se-1.7.jar"/>
+	<classpathentry kind="lib" path="libaries/opencsv-5.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
